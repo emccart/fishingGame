@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://trash.png" type="Texture" id=1]
+[ext_resource path="res://PlasticRings.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 29.5552
+height = 11.2947
+
+[node name="PlasticRings" type="KinematicBody2D"]
+position = Vector2( 448, 274 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -0.984366
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
