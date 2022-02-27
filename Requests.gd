@@ -1,12 +1,11 @@
 extends Area2D
 
 
-# Declare member variables here. Examples:
+#variables and set up stuff
 var requests = []
 var rng = RandomNumberGenerator.new()
 #different possible fish requests, [orange, yellow, purple]
 var orderTypes = [[1,0,0], [0,1,0], [0,0,1], [3,0,0], [0,2,0], [2,0,1], [1,1,1]]
-
 #hide the NextDayButton for now
 func hideButton():
 	$NextDayButton.hide()
@@ -71,7 +70,4 @@ func _on_NextDayButton_pressed():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	getRequests()
-	display()
-	hideButton()
-	#pass # Replace with function body.
+	pass # Replace with function body.
