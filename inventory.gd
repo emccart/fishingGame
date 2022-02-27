@@ -31,6 +31,11 @@ func fill_req(var req):
 			fishCounts[x] -= req[x]
 			totalFishCount -= req[x]
 	return true
+	
+func reset():
+	for x in 3:
+		fishCounts[x] = 0
+	totalFishCount = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
