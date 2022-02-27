@@ -10,8 +10,13 @@ config_version=4
 
 [application]
 
-config/name="fishingGame"
+config/name="fishing"
+run/main_scene="res://Requests.tscn"
 config/icon="res://icon.png"
+
+[global]
+
+main=false
 
 [physics]
 
