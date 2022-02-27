@@ -27,9 +27,9 @@ func fill_req(var req):
 	for x in 3:
 		if req[x] > fishCounts[x] :
 			return false
-		else:
-			fishCounts[x] -= req[x]
-			totalFishCount -= req[x]
+	for x in 3:
+		fishCounts[x] -= req[x]
+		totalFishCount -= req[x]
 	return true
 	
 func reset():
