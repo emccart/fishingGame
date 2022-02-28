@@ -22,3 +22,7 @@ func _process(_delta):
 		move_and_collide(Vector2(speed,0))
 		if position.x>=right_side:
 			going_left = true
+
+func caught():
+	queue_free()
+	return "Rings"

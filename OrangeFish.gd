@@ -4,7 +4,7 @@ extends KinematicBody2D
 var going_left = false
 var left_side = 50
 var right_side = 974
-var speed = 1.5
+var speed = 1
 
 
 
@@ -25,9 +25,3 @@ func _process(_delta):
 		if position.x>=right_side:
 			going_left = true
 			scale.x = scale.x * -1
-			
-			
-func caught():
-	queue_free()
-	return "Yellow"
-			

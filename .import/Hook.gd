@@ -1,21 +1,17 @@
-extends Node
+extends Area2D
 
 
 # Declare member variables here. Examples:
-var day_end = false
+# var a = 2
+# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$EndDay.set_process(false)
-	$EndDay.visible = false
-
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if day_end == true:
-		$EndDay.set_process(true)
-		$EndDay.visible = true
-	else:
-		pass
+	var velocity = Vector2(0, 1)
+	position += velocity * delta
