@@ -12,7 +12,12 @@ config_version=4
 
 config/name="fishingGame"
 run/main_scene="res://menu.tscn"
+
 config/icon="res://icon.png"
+
+[global]
+
+main=false
 
 [physics]
 
