@@ -56,6 +56,7 @@ func _on_GoFishButton_pressed():
 	uncheck()
 	$NextDayButton.show()
 	$GoFishButton.hide()
+	get_tree().change_scene("res://Fishing.tscn")
 
 #if the NextDayButton is pressed
 func _on_NextDayButton_pressed():
@@ -70,4 +71,6 @@ func _on_NextDayButton_pressed():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	hideButton()
+	getRequests()
+	display()
