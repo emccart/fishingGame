@@ -19,3 +19,8 @@ func _process(delta):
 		$EndDay.visible = true
 	else:
 		pass
+
+
+
+func _on_EndDay_pressed():
+	get_tree().change_scene("res://requests.tscn")

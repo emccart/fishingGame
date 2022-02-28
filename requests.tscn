@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://Requests.gd" type="Script" id=1]
+[ext_resource path="res://requests.gd" type="Script" id=1]
 [ext_resource path="res://shop.png" type="Texture" id=2]
 [ext_resource path="res://inventory.tscn" type="PackedScene" id=3]
+[ext_resource path="res://obtainRequest.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Xolonium-Regular.ttf"
@@ -54,6 +55,7 @@ size = 26
 font_data = SubResource( 13 )
 
 [node name="requests" type="Area2D"]
+pause_mode = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -174,6 +176,8 @@ __meta__ = {
 [node name="Inventory" parent="." instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
+
+[node name="obtainRequest" parent="." instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="GoFishButton" to="." method="_on_GoFishButton_pressed"]

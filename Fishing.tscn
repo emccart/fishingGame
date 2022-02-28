@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://OrangeFish.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PurpleFish.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Fishing.gd" type="Script" id=7]
 [ext_resource path="res://Boat.tscn" type="PackedScene" id=8]
 [ext_resource path="res://RichTextLabel.gd" type="Script" id=9]
+[ext_resource path="res://ding.mp3" type="AudioStream" id=10]
+[ext_resource path="res://inventory.tscn" type="PackedScene" id=11]
+[ext_resource path="res://obtainRequest.tscn" type="PackedScene" id=12]
 
 [node name="Fishing" type="Node"]
 pause_mode = 2
@@ -122,3 +125,16 @@ script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ding" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 686, 324 )
+scale = Vector2( 0.5, 0.5 )
+stream = ExtResource( 10 )
+
+[node name="Inventory" parent="." instance=ExtResource( 11 )]
+margin_right = -755.0
+margin_bottom = -514.0
+
+[node name="obtainRequest" parent="." instance=ExtResource( 12 )]
+
+[connection signal="pressed" from="EndDay" to="." method="_on_EndDay_pressed"]
