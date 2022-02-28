@@ -25,3 +25,7 @@ func _process(_delta):
 		if position.x>=right_side:
 			going_left = true
 			scale.x = scale.x * -1
+			
+func caught():
+	queue_free()
+	return "Orange"
