@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Requests.gd" type="Script" id=1]
 [ext_resource path="res://shop.png" type="Texture" id=2]
+[ext_resource path="res://inventory.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Xolonium-Regular.ttf"
@@ -53,7 +54,6 @@ size = 26
 font_data = SubResource( 13 )
 
 [node name="requests" type="Area2D"]
-position = Vector2( -1, 1 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -64,9 +64,9 @@ position = Vector2( 513, 300 )
 texture = ExtResource( 2 )
 
 [node name="Message" type="Label" parent="."]
-margin_left = 8.0
+margin_left = 354.0
 margin_top = 6.0
-margin_right = 322.0
+margin_right = 763.0
 margin_bottom = 87.0
 custom_fonts/font = SubResource( 2 )
 text = "Requests"
@@ -139,9 +139,9 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 143.0
+margin_left = 295.0
 margin_top = 489.0
-margin_right = 576.0
+margin_right = 708.0
 margin_bottom = 558.0
 custom_fonts/font = SubResource( 4 )
 text = "Fulfill Selected Request"
@@ -170,6 +170,10 @@ text = "Next Day"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Inventory" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="GoFishButton" to="." method="_on_GoFishButton_pressed"]
