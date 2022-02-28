@@ -1,0 +1,176 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Requests.gd" type="Script" id=1]
+[ext_resource path="res://shop.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 25
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 25
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 33
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 27
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://fonts/Xolonium-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 26
+font_data = SubResource( 13 )
+
+[node name="requests" type="Area2D"]
+position = Vector2( -1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Shop" type="Sprite" parent="."]
+position = Vector2( 513, 300 )
+texture = ExtResource( 2 )
+
+[node name="Message" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 6.0
+margin_right = 322.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 2 )
+text = "Requests"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request1" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 110.0
+margin_right = 766.0
+margin_bottom = 171.0
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request2" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 239.0
+margin_right = 766.0
+margin_bottom = 307.0
+custom_fonts/font = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request3" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 389.0
+margin_right = 762.0
+margin_bottom = 450.0
+custom_fonts/font = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request1Checkbox" type="CheckBox" parent="."]
+anchor_left = 0.856
+anchor_top = 4.434
+anchor_right = 2.318
+anchor_bottom = 6.489
+margin_left = 665.0
+margin_top = 127.0
+margin_right = 724.0
+margin_bottom = 168.0
+text = "Fufill"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request2Checkbox" type="CheckBox" parent="."]
+margin_left = 662.0
+margin_top = 262.0
+margin_right = 721.0
+margin_bottom = 311.0
+text = "Fufill"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Request3Checkbox" type="CheckBox" parent="."]
+margin_left = 662.0
+margin_top = 409.0
+margin_right = 726.0
+margin_bottom = 460.0
+text = "Fufill"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 143.0
+margin_top = 489.0
+margin_right = 576.0
+margin_bottom = 558.0
+custom_fonts/font = SubResource( 4 )
+text = "Fulfill Selected Request"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoFishButton" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 52.0
+margin_right = 1012.0
+margin_bottom = 98.0
+custom_fonts/font = SubResource( 12 )
+text = "Go Fish"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextDayButton" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 117.0
+margin_right = 1013.0
+margin_bottom = 164.0
+custom_fonts/font = SubResource( 14 )
+text = "Next Day"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="GoFishButton" to="." method="_on_GoFishButton_pressed"]
+[connection signal="pressed" from="NextDayButton" to="." method="_on_NextDayButton_pressed"]
