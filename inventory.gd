@@ -1,7 +1,7 @@
 extends Control
 
-export var fishCounts = [-1, -1, -1]
-var totalFishCount = -3
+export var fishCounts = [0, 0, 0]
+var totalFishCount = 0
 
 func update_orange():
 	fishCounts[0] += 1
@@ -19,9 +19,7 @@ func update_gold():
 	get_node("Goldfish/GoldCount").text = str(fishCounts[2])
 
 func _ready():
-	update_orange()
-	update_purple()
-	update_gold()
+	pass
 
 func fill_req(var req):
 	for x in 3:
