@@ -1,2 +1,0 @@
-The Font "Xolonium-Regular.tff" from the Dodge the Creeps Godot Tutorial
-Ding sound effect from https://www.youtube.com/watch?v=qZC5gtOw3DU 
