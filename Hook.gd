@@ -36,12 +36,15 @@ func _caught_fish(body):
 	
 	var name = body.caught()
 	if  name == "Orange":
+		$ding.play()
 		print("Orangefish")
 		limit -= 1
 	elif name == "Yellow":
+		$ding.play()
 		print("Yellowfish")
 		limit -= 1
 	elif name == "Purple":
+		$ding.play()
 		print("Purplefish")
 		limit -= 1
 	elif name == "Rings":
