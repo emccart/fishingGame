@@ -35,23 +35,23 @@ func _caught_fish(body):
 	print(body)
 	
 	var name = body.caught()
+	var inv = get_parent().get_parent().get_node("Inventory")
+	
 	if  name == "Orange":
 		$ding.play()
-		print("Orangefish")
 		limit -= 1
+		inv.update_orange()
 	elif name == "Yellow":
 		$ding.play()
-		print("Yellowfish")
 		limit -= 1
+		inv.update_gold()
 	elif name == "Purple":
 		$ding.play()
-		print("Purplefish")
 		limit -= 1
+		inv.update_purple()
 	elif name == "Rings":
-		print("Plasticrings")
 		limit -= 1
 	elif name == "Umbrella":
-		print("Umbrella")
 		limit -= 1
 	
 	fish_hit = true
