@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://OrangeFish.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PurpleFish.tscn" type="PackedScene" id=2]
+[ext_resource path="res://YellowFish.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fishing_background.png" type="Texture" id=4]
+[ext_resource path="res://Umbrella.tscn" type="PackedScene" id=5]
+[ext_resource path="res://PlasticRings.tscn" type="PackedScene" id=6]
+[ext_resource path="res://.import/Fishing.gd" type="Script" id=7]
+[ext_resource path="res://Boat.tscn" type="PackedScene" id=8]
+[ext_resource path="res://.import/RichTextLabel.gd" type="Script" id=9]
+
+[node name="Fishing" type="Node"]
+pause_mode = 2
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boat" parent="." instance=ExtResource( 8 )]
+pause_mode = 1
+position = Vector2( 504, 85 )
+
+[node name="YellowFish" parent="." instance=ExtResource( 3 )]
+pause_mode = 1
+position = Vector2( 686, 324 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="YellowFish2" parent="." instance=ExtResource( 3 )]
+pause_mode = 1
+position = Vector2( 584, 160 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="YellowFish3" parent="." instance=ExtResource( 3 )]
+pause_mode = 1
+position = Vector2( 53, 425 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="OrangeFish" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
+position = Vector2( 209, 194 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="OrangeFish2" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
+position = Vector2( 490, 504 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="OrangeFish3" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
+position = Vector2( 867, 263 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="PurpleFish" parent="." instance=ExtResource( 2 )]
+pause_mode = 1
+position = Vector2( 209, 543 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="PurpleFish2" parent="." instance=ExtResource( 2 )]
+pause_mode = 1
+position = Vector2( 811, 580 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="PurpleFish3" parent="." instance=ExtResource( 2 )]
+pause_mode = 1
+position = Vector2( 233, 353 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="Umbrella" parent="." instance=ExtResource( 5 )]
+pause_mode = 1
+position = Vector2( 633, 458 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="Umbrella2" parent="." instance=ExtResource( 5 )]
+pause_mode = 1
+position = Vector2( 768, 129 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="PlasticRings" parent="." instance=ExtResource( 6 )]
+pause_mode = 1
+position = Vector2( 447, 240 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="PlasticRings2" parent="." instance=ExtResource( 6 )]
+pause_mode = 1
+position = Vector2( 378, 398 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 0
+
+[node name="EndDay" type="Button" parent="."]
+pause_mode = 2
+margin_left = 383.0
+margin_top = 320.0
+margin_right = 641.0
+margin_bottom = 395.0
+text = "End Day"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CatchCount" type="RichTextLabel" parent="."]
+pause_mode = 2
+margin_left = 767.0
+margin_top = 1.0
+margin_right = 1022.0
+margin_bottom = 41.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
