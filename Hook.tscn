@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://hook.png" type="Texture" id=1]
 [ext_resource path="res://Line.gd" type="Script" id=2]
 [ext_resource path="res://Hook.gd" type="Script" id=3]
+[ext_resource path="res://ding.mp3" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -25,5 +26,10 @@ shape = SubResource( 1 )
 
 [node name="Line" type="Node2D" parent="."]
 script = ExtResource( 2 )
+
+[node name="ding" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_caught_fish"]
